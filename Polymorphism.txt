@@ -1,0 +1,46 @@
+import java.util.*;
+
+class Publication 
+{
+ String title;
+ int price;
+ int copies;
+ void salecopy() 
+ { }
+} 
+class Book 
+{ 
+ String title;
+ int price;
+ int copies;
+ void salecopy() 
+ { 
+ price=250;
+ System.out.println("Total sale:" +copies*price);
+ } 
+ void ordercopies() 
+ { 
+ Scanner in=new Scanner(System.in); 
+ System.out.println("Enter Copies:");
+ copies=in.nextInt(); 
+ } 
+ } 
+ class Magazine 
+ { 
+   String title;
+   int price; 
+   int copies;
+   void salecopy()
+   {} 
+   void currentIssuee(){}
+   void recieveIssue(){} 
+ } 
+ public class Pubs 
+ { 
+  public static void main(String args[]) 
+  { 
+   Book b= new Book();
+   b.ordercopies(); 
+   b.salecopy();
+  } 
+ }

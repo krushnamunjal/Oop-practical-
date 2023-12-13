@@ -1,0 +1,63 @@
+import java.util.*;
+
+abstract class shape
+{
+ double area, peremeter;
+ public shape()
+ {}
+ abstract void getArea();
+ abstract void getPeremeter();
+}
+class Triangle extends shape
+{
+ double side1, side2, side3;
+ Triangle(double side1, double side2, double side3)
+ {
+  super();
+  this.side1 = side1;
+  this.side2 = side2;
+  this.side3 = side3;
+ }
+ public void getArea()
+ {
+  double s = 0.5*(side1 + side2 + side3);
+  double area = Math.sqrt(s * (s - side1) * (s - side2) * (s -side3));
+  System.out.println("Area of Triangle " +String.valueOf(area));
+ }
+ public void getPeremeter()
+ { 
+  double peremeter = side3 + side2 + side1; System.out.println("Peremetr of Triangle : " + String.valueOf(peremeter));
+ }
+} 
+class Rectangle extends shape
+{
+ double width, height;
+ Rectangle(double width, double height)
+ {
+  super();
+  this.width = width;
+  this.height = height;
+ }
+ public void getArea()
+ {
+  double area = width*height;
+  System.out.println("Area of Rectangle :" + String.valueOf(area));
+ }
+ public void getPeremeter()
+ {
+ double peremeter = 2*(width + height);
+ System.out.println("Peremeter of Rectangle :" + String.valueOf(peremeter));
+ }
+}
+public class abstractClassProg 
+{
+ public static void main(String args[])
+ {
+  Triangle t = new Triangle(12, 10, 5);
+  Rectangle r =new Rectangle(25, 40);
+  t.getArea();
+  t.getPeremeter();
+  r.getArea();
+  r.getPeremeter();
+ }
+}
